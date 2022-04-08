@@ -10,6 +10,15 @@ export default new Command({
         "i:amount:1- the amount to give",
     ],
     async execute(cmd, user, amount) {
+        if (cmd.user.id == user.id) {
+            await cmd.replyEmbed({
+                title: "Invalid Target",
+                description: "You cannot pay yourself money.",
+                color: "RED",
+            });
+            return;
+        }
+
         if ((await get_balance(cmd.user.id)) < amount) {
             await cmd.replyEmbed({
                 title: "Insufficient Funds",
