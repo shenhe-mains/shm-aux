@@ -1,0 +1,19 @@
+{
+  "name": "shm-aux",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "create": "node src/create.js",
+    "destroy": "node src/destroy.js",
+    "start": "node src/main.js"
+  },
+  "author": "hyper-neutrino",
+  "dependencies": {
+    "discord-markdown-embeds": "^2.0.4",
+    "file-ez": "^1.0.0",
+    "fs": "^0.0.1-security",
+    "mongodb": "^4.5.0",
+    "paimon.js": "^1.0.5"
+  }
+}
