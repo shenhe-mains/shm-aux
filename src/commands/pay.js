@@ -1,5 +1,6 @@
 import { Command } from "paimon.js";
 import { get_balance, transfer } from "../lib/accounts.js";
+import { exorcium } from "../lib/format.js";
 
 export default new Command({
     name: "pay",
